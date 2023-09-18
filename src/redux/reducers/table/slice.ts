@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CleanTableAction, OrderAction, Table, UseTableAction } from "./types";
+import { CleanTableAction, OrderAction, ResetAction, Table, UseTableAction } from "./types";
 
 const initialState: Table[] = [{
     customers   : 0,
@@ -42,6 +42,9 @@ export const TableSlice = createSlice({
             modified[table].orders = orders;
 
             return modified
+        },
+        ResetTable : (state, { type, payload } : ResetAction) => {
+            return initialState
         }
     }
 })

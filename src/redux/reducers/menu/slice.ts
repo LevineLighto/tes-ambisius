@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AddMenuAction, Menu, RemoveMenuAction } from "./types";
+import { AddMenuAction, Menu, RemoveMenuAction, ResetAction } from "./types";
 
 const initialState : Menu[] = [{
     id  : 'lmnhztzg',
@@ -27,6 +27,9 @@ export const MenuSlice = createSlice({
             const modified = [ ...state ];
             
             return modified.filter(menu => menu.id != payload);
+        },
+        ResetMenu : (state, { type, payload } : ResetAction)  => {
+            return initialState;
         }
     }
 })

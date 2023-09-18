@@ -7,7 +7,8 @@ import {
 
 export const {
     AddMenu,
-    RemoveMenu
+    RemoveMenu,
+    ResetMenu
 } = MenuSlice.actions;
 
 const MenuReducer = MenuSlice.reducer;

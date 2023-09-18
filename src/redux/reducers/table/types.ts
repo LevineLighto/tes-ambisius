@@ -23,3 +23,8 @@ export interface OrderAction {
         orders  : string[],
     }
 }
+
+export interface ResetAction {
+    payload : void,
+    type    : string
+}

@@ -2,13 +2,14 @@ import { TableSlice } from "./slice";
 
 import { 
     Tables, 
-    TableOrders
+    TableOrders,
 } from "./selectors";
 
 export const {
     UseTable,
     CleanTable,
-    Order
+    Order,
+    ResetTable
 } = TableSlice.actions;
 
 const TableReducer = TableSlice.reducer;
