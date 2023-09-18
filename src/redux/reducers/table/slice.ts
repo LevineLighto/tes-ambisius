@@ -17,13 +17,9 @@ export const TableSlice = createSlice({
     initialState: initialState,
     reducers    : {
         UseTable : (state, { type, payload }: UseTableAction) => {
-            const modified = [ ...state ];
-
             const { customers, number } = payload;
 
-            modified[number].customers = customers;
-
-            return modified;
+            state[number].customers = customers;
         },
         CleanTable : (state, { type, payload } : CleanTableAction) => {
             const modified = [ ...state ];
@@ -36,12 +32,8 @@ export const TableSlice = createSlice({
             return modified;
         },
         Order : (state, { type, payload } : OrderAction) => {
-            const modified = [ ...state ];
-
             const { table, orders } = payload;
-            modified[table].orders = orders;
-
-            return modified
+            state[table].orders = orders;
         },
         ResetTable : (state, { type, payload } : ResetAction) => {
             return initialState
