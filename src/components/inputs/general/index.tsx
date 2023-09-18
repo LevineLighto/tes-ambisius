@@ -75,7 +75,7 @@ export const Input : FC<Props> = ({
                 { ...props }
             />
             <label
-                htmlFor={`input-${id}-${name}`}
+                htmlFor={`input-${name}${id != '' ? `-${id}` : ''}`}
                 className={`${
                     LabelClasses.color
                 } ${
