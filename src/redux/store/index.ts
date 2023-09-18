@@ -24,7 +24,7 @@ const reducer = combineReducers({
 });
 
 const persistConfig = {
-    key         : process.env.REDUX_KEY,
+    key         : process.env.NEXT_PUBLIC_REDUX_KEY,
     storage     : storage,
     whitelist   : ['Menu', 'Table']
 }
