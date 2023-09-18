@@ -1,9 +1,17 @@
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
-import { faArrowRotateLeft, faCircleCheck, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { 
+    faArrowRotateLeft,
+    faCircleCheck,
+    faCircleInfo,
+    faPlus,
+    faTrash
+} from "@fortawesome/free-solid-svg-icons";
 
 export const Icons = {
+    add         : faPlus,
     circle      : faCircle,
     circleCheck : faCircleCheck,
+    delete      : faTrash,
     info        : faCircleInfo,
     restart     : faArrowRotateLeft,
 }
