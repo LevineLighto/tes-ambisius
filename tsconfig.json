@@ -19,6 +19,7 @@
             }
         ],
         "paths": {
+            "@/cashier/*"   : ["./src/modules/cashier/*"],
             "@/menu/*"      : ["./src/modules/menu/*"],
             "@/order/*"     : ["./src/modules/order/*"],
             "@/tables/*"    : ["./src/modules/tables/*"],

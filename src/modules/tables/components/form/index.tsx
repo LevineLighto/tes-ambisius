@@ -104,6 +104,7 @@ export const TableForm : FC = () => {
             </div>
             <SolidBtn
                 className={ButtonClasses.flex}
+                disabled={typeof table == 'undefined' || !amount}
                 type='submit'
             >
                 <Icon

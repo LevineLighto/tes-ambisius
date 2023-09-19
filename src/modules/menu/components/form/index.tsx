@@ -65,6 +65,7 @@ export const MenuForm : FC = () => {
             <SolidBtn
                 className={ButtonClasses.flex}
                 type='submit'
+                disabled={name == ''}
             >
                 <Icon
                     icon='add'

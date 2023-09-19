@@ -4,7 +4,9 @@ import {
     faCircleCheck,
     faCircleInfo,
     faPaperPlane,
+    faPeopleCarryBox,
     faPlus,
+    faPrint,
     faSave,
     faTrash
 } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +15,10 @@ export const Icons = {
     add         : faPlus,
     circle      : faCircle,
     circleCheck : faCircleCheck,
+    clean       : faPeopleCarryBox,
     delete      : faTrash,
     info        : faCircleInfo,
+    print       : faPrint,
     restart     : faArrowRotateLeft,
     save        : faSave,
     send        : faPaperPlane,
