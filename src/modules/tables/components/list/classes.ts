@@ -1,6 +1,7 @@
 export const ContainerClasses = {
-    display : 'flex',
-    flex    : 'flex-wrap justify-center',
+    background  : 'bg-orange-100',
+    display     : 'flex',
+    flex        : 'flex-wrap justify-center items-stretch',
 }
 
 export const ItemClasses = {

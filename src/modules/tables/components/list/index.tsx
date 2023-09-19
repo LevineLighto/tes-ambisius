@@ -12,6 +12,8 @@ export const TableList : FC = () => {
     return (
         <div
             className={`${
+                ContainerClasses.background
+            } ${
                 ContainerClasses.display
             } ${
                 ContainerClasses.flex

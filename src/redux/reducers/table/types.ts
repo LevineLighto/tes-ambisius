@@ -1,6 +1,11 @@
+export interface Order {
+    id      : string,
+    amount  : number,
+}
+
 export interface Table {
     customers   : number,
-    orders      : string[],
+    orders      : Order[],
 }
 
 export interface UseTableAction {
@@ -20,7 +25,7 @@ export interface OrderAction {
     type    : string,
     payload : {
         table   : number,
-        orders  : string[],
+        orders  : Order[],
     }
 }
 

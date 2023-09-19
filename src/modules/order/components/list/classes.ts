@@ -1,4 +1,5 @@
 export const TitleClasses = {
+    margin  : 'mb-3',
     size    : 'text-lg',
     weight  : 'font-light'
 }

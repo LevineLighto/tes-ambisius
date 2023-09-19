@@ -11,6 +11,8 @@ export const TableCard : FC<Props> = ({
     <Card
         className={`${
             Classes.background[!table.customers ? 'empty' : 'occupied']
+        } ${
+            Classes.height
         }`}
         title={<>Meja {number}</>}
         content={(
