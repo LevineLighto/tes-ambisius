@@ -24,6 +24,10 @@ export const Radio : FC<RadioProps> = ({
     const handleSelect = useCallback<(value: any) => any>((value) => {
         return () => {
             setSelected(value);
+
+            if(typeof onChange == 'function') {
+                onChange(value);
+            }
         }
     }, [onChange])
 

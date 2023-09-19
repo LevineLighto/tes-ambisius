@@ -58,6 +58,8 @@ export const Dropdown : FC<Props> = ({
                 } ${
                     InputClasses.display
                 } ${
+                    InputClasses.lineHeight
+                } ${
                     InputClasses.outline
                 } ${
                     InputClasses.padding

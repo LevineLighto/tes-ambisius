@@ -3,6 +3,7 @@ import {
     faArrowRotateLeft,
     faCircleCheck,
     faCircleInfo,
+    faPaperPlane,
     faPlus,
     faSave,
     faTrash
@@ -16,4 +17,5 @@ export const Icons = {
     info        : faCircleInfo,
     restart     : faArrowRotateLeft,
     save        : faSave,
+    send        : faPaperPlane,
 }

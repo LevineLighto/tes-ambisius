@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { RadioItemClasses as Classes } from "./classes";
+import { RadioItemClasses as Classes, IconClasses } from "./classes";
 import { RadioItemProps as Props } from "./props";
 import { Icon } from "@/components/icon";
 
@@ -16,6 +16,8 @@ export const RadioItem : FC<Props> = ({
         } ${
             Classes.color[selected ? 'selected' : 'default']
         } ${
+            Classes.cursor
+        } ${
             Classes.flex
         } ${
             Classes.margin
@@ -28,9 +30,14 @@ export const RadioItem : FC<Props> = ({
     >
         <Icon
             icon={selected ? 'circleCheck' : 'circle'}
+            className={`${
+                IconClasses.color[selected ? 'selected' : 'default']
+            }`}
         />
-        {
-            label
-        }
+        <span>
+            {
+                label
+            }
+        </span>
     </div>
 )

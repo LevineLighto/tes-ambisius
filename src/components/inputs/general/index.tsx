@@ -50,11 +50,13 @@ export const Input : FC<Props> = ({
                 name={name}
                 id={`input-${name}${id != '' ? `-${id}` : ''}`}
                 className={`${
-                    readOnly && InputClasses.background
+                    InputClasses.background
                 } ${
-                    !readOnly && InputClasses.border
+                    InputClasses.border
                 } ${
                     InputClasses.display
+                } ${
+                    InputClasses.lineHeight
                 } ${
                     InputClasses.outline
                 } ${
