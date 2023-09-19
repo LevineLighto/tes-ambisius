@@ -54,7 +54,12 @@ export const TableForm : FC = () => {
             customers   : amount
         }));
 
-        Toast.create(`Pelanggan sebanyak ${amount} berhasil ditempatkan di meja ${table + 1}`)
+        let tbl = table;
+        if(typeof tbl == 'string') {
+            tbl = parseInt(tbl);
+        }
+
+        Toast.create(`Pelanggan sebanyak ${amount} berhasil ditempatkan di meja ${tbl + 1}`)
 
         setTable(undefined);
         setAmount(0);

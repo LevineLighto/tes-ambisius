@@ -8,6 +8,7 @@ import {
     faPlus,
     faPrint,
     faSave,
+    faTimes,
     faTrash
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,6 +17,7 @@ export const Icons = {
     circle      : faCircle,
     circleCheck : faCircleCheck,
     clean       : faPeopleCarryBox,
+    close       : faTimes,
     delete      : faTrash,
     info        : faCircleInfo,
     print       : faPrint,

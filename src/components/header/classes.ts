@@ -14,3 +14,9 @@ export const LinkClasses = {
     size    : 'text-xl',
     weight  : 'font-light',
 }
+
+export const AppInfoClasses = {
+    listStyle   : 'list-decimal',
+    margin      : 'mb-3',
+    padding     : 'pl-8',
+}

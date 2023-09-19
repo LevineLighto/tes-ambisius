@@ -18,9 +18,11 @@ import {
     persistStore
 } from "redux-persist";
 import ToastReducer from "../reducers/toast";
+import ModalReducer from "../reducers/modal";
 
 const reducer = combineReducers({
     Menu : MenuReducer,
+    Modal: ModalReducer,
     Table: TableReducer,
     Toast: ToastReducer
 });

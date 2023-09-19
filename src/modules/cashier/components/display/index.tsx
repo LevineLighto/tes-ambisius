@@ -61,6 +61,7 @@ export const CashierDisplay : FC = () => {
                         ActionItemClasses.width
                     }`}
                     onClick={handleClean}
+                    disabled={typeof selected == 'undefined'}
                 >
                     <Icon
                         icon="clean"

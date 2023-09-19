@@ -1,6 +1,6 @@
 'use client';
 
-import { Toasts as ToastSelector } from "@/redux/reducers/toast/selectors";
+import { Toasts as ToastSelector } from "@/redux/reducers/toast";
 import { FC } from "react";
 import { useSelector } from "react-redux";
 import { ToastContainerClasses as Classes } from "./classes";
