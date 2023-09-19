@@ -6,6 +6,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import { Inter } from 'next/font/google'
 import { Navigation } from '@/components/navigations'
 import { Header } from '@/components/header'
+import { ToastContainer } from '@/components/toast'
 
 config.autoAddCss = false
 
@@ -32,6 +33,7 @@ export default function RootLayout({
                     <main>
                         { children }
                     </main>
+                    <ToastContainer/>
                 </ReduxProvider>
             </body>
         </html>

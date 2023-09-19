@@ -18,11 +18,13 @@ import { SolidBtn } from '@/components/buttons';
 import { Icon } from '@/components/icon';
 import { useDispatch } from 'react-redux';
 import { AddMenu } from '@/redux/reducers/menu';
+import { useToast } from '@/hooks/interactive';
 
 export const MenuForm : FC = () => {
     const [name, setName] = useState('');
 
-    const dispatch = useDispatch();
+    const dispatch  = useDispatch();
+    const Toast     = useToast();
 
     const handleSubmit = useCallback<FormEventHandler<HTMLFormElement>>(event => {
         event.preventDefault();
@@ -32,8 +34,9 @@ export const MenuForm : FC = () => {
         }
 
         dispatch(AddMenu(name));
+        Toast.create(`Menu ${name} berhasil ditambahkan`);
         setName('');
-    }, [name, dispatch, AddMenu]);
+    }, [name, dispatch, AddMenu, Toast]);
 
     return (
         <form

@@ -9,6 +9,7 @@ import { Order as OrderType } from "@/redux/reducers/table/types";
 import { OrderInput } from "../input";
 import { SolidBtn } from "@/components/buttons";
 import { Icon } from "@/components/icon";
+import { useToast } from "@/hooks/interactive";
 
 export const OrderForm : FC = () => {
     const [table, setTable]     = useState<number>();
@@ -16,7 +17,8 @@ export const OrderForm : FC = () => {
 
     const Table = useSelector(Tables);
 
-    const dispatch = useDispatch();
+    const dispatch  = useDispatch();
+    const Toast     = useToast();
 
     const OccupiedTables = useMemo(() => {
         const Labels : string[] = [];
@@ -77,9 +79,11 @@ export const OrderForm : FC = () => {
             orders: orders
         }));
 
+        Toast.create('Pesanan berhasil dikirimkan ke dapur')
+
         setTable(undefined);
         setOrders([]);
-    }, [table, orders, dispatch])
+    }, [table, orders, dispatch, Toast])
 
     return (
         <form

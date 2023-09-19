@@ -6,15 +6,18 @@ import { useDispatch } from 'react-redux';
 import { RemoveMenu } from '@/redux/reducers/menu';
 import { CellClasses, DeleteClasses, RowClasses } from './classes';
 import { Icon } from '@/components/icon';
+import { useToast } from '@/hooks/interactive';
 
 export const MenuRow : FC<MenuRowProps> = ({
     menu
 }) => {
-    const dispatch = useDispatch();
+    const dispatch  = useDispatch();
+    const Toast     = useToast();
 
     const handleDelete = useCallback(() => {
         dispatch(RemoveMenu(menu.id));
-    }, [menu, dispatch, RemoveMenu]);
+        Toast.create(`Menu ${menu.name} berhasil dihapus`);
+    }, [menu, dispatch, Toast]);
 
     return (
         <tr

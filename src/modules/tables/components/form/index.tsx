@@ -17,12 +17,14 @@ import {
 import { Dropdown, Input } from '@/components/inputs';
 import { SolidBtn } from '@/components/buttons';
 import { Icon } from '@/components/icon';
+import { useToast } from '@/hooks/interactive';
 
 export const TableForm : FC = () => {
     const [table, setTable]     = useState<number>();
     const [amount, setAmount]   = useState<number>(0);
 
     const dispatch  = useDispatch();
+    const Toast     = useToast();
     const tables    = useSelector(Tables);
 
     const EmptyTables = useMemo(() => {
@@ -52,9 +54,11 @@ export const TableForm : FC = () => {
             customers   : amount
         }));
 
+        Toast.create(`Pelanggan sebanyak ${amount} berhasil ditempatkan di meja ${table + 1}`)
+
         setTable(undefined);
         setAmount(0);
-    }, [table, amount, UseTable, dispatch]);
+    }, [table, amount, dispatch, Toast]);
 
     return (
         <form

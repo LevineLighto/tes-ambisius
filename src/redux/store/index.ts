@@ -17,10 +17,12 @@ import {
     persistReducer,
     persistStore
 } from "redux-persist";
+import ToastReducer from "../reducers/toast";
 
 const reducer = combineReducers({
     Menu : MenuReducer,
-    Table: TableReducer
+    Table: TableReducer,
+    Toast: ToastReducer
 });
 
 const persistConfig = {

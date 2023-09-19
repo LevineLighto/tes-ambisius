@@ -8,14 +8,19 @@ import { ContainerClasses, ItemClasses } from "./classes";
 import { useDispatch } from "react-redux";
 import { ResetMenu } from "@/redux/reducers/menu";
 import { ResetTable } from "@/redux/reducers/table";
+import { useToast } from "@/hooks/interactive";
 
 export const Navigation : FC = () => {
     const dispatch = useDispatch();
 
+    const Toast = useToast();
+
     const handleReset = useCallback(() => {
         dispatch(ResetMenu());
         dispatch(ResetTable());
-    }, [dispatch])
+
+        Toast.create('Aplikasi berhasil direset');
+    }, [dispatch, Toast])
 
     return (
         <div 

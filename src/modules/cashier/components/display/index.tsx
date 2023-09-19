@@ -8,6 +8,7 @@ import { CashierForm } from "../form";
 import { SolidBtn } from "@/components/buttons";
 import { Icon } from "@/components/icon";
 import { CashierTable } from "../table";
+import { useToast } from "@/hooks/interactive";
 
 export const CashierDisplay : FC = () => {
     const [selected, setSelected] = useState<number>();
@@ -15,6 +16,7 @@ export const CashierDisplay : FC = () => {
     const orders    = useSelector(TableOrders(selected));
 
     const dispatch  = useDispatch();
+    const Toast     = useToast();
 
     const handleClean = useCallback(() => {
         if(!selected) {
@@ -22,7 +24,11 @@ export const CashierDisplay : FC = () => {
         }
 
         dispatch(CleanTable(selected))
-    }, [dispatch, selected]);
+        
+        setSelected(undefined);
+
+        Toast.create('Meja berhasil dibersihkan');
+    }, [dispatch, selected, Toast]);
 
     return (
         <>
